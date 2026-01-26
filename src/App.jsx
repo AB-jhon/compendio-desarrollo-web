@@ -139,11 +139,11 @@ function App() {
                     <Terminal size={20} className="text-blue-400" />
                   </div>
                   <span className="text-xl font-black tracking-tighter text-white">
-                    JAB Engineer
+                    Jhonathan Anota
                   </span>
                 </div>
                 <p className="text-slate-400 text-sm font-medium">
-                  Ingeniería de Software e Implementación
+                  Ingeniero en Sistemas Computacionales
                 </p>
               </div>
 
@@ -158,7 +158,7 @@ function App() {
                 </div>
                 
                 <p className="text-slate-500 text-xs">
-                  © {new Date().getFullYear()} • <span className="text-blue-400 font-bold">Jhonathan Anota</span> • Todos los derechos reservados
+                  © {new Date().getFullYear()} • <span className="text-blue-400 font-bold">JAB Engineer</span> • Todos los derechos reservados
                 </p>
               </div>
             </div>
