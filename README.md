@@ -25,16 +25,4 @@
 
 ---
 
-### 🚀 Instalación y Uso
-Si quieres ejecutar este proyecto localmente:
-
-1. Clona el repositorio:
-   ```bash
-   git clone [https://github.com/AB-jhon/compendio-desarrollo-web.git](https://github.com/AB-jhon/compendio-desarrollo-web.git)
-
-
-   
-
----
-
 👤 Autor: Jhonathan Anota - Ingeniero de Software e Implementación
