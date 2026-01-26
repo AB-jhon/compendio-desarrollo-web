@@ -23,7 +23,8 @@ function Interfaz() {
                     {/* Tarjeta Redes Sociales */}
                     <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
                         <Share2 className="text-blue-400 mb-4" size={32} />
-                        <h4 className="font-bold text-lg mb-2">Redes Sociales</h4>
+                        {/* AGREGADO: text-slate-900 dark:text-white */}
+                        <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Redes Sociales</h4>
                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             Actualización de feeds y notificaciones instantáneas sin recargar. 
                             <span className="block mt-2 text-xs italic opacity-70">(McCarthy, 2020)</span>
@@ -33,7 +34,8 @@ function Interfaz() {
                     {/* Tarjeta Mensajería */}
                     <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
                         <MessageSquare className="text-green-500 mb-4" size={32} />
-                        <h4 className="font-bold text-lg mb-2">Mensajería</h4>
+                        {/* AGREGADO: text-slate-900 dark:text-white */}
+                        <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Mensajería</h4>
                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             Comunicación bidireccional inmediata y estados de "escribiendo..." en tiempo real.
                         </p>
@@ -42,7 +44,8 @@ function Interfaz() {
                     {/* Tarjeta E-commerce */}
                     <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
                         <ShoppingCart className="text-orange-500 mb-4" size={32} />
-                        <h4 className="font-bold text-lg mb-2">E-commerce</h4>
+                        {/* AGREGADO: text-slate-900 dark:text-white */}
+                        <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">E-commerce</h4>
                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             Recomendaciones personalizadas y carritos que se actualizan al instante.
                             <span className="block mt-2 text-xs italic opacity-70">(Smith & Johnson, 2019)</span>

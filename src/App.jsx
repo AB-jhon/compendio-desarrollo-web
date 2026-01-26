@@ -123,25 +123,48 @@ function App() {
           </div>
         </main>
 
-        {/* Footer Profesional */}
-        <footer className="mt-10 pb-16 text-center border-t border-slate-200 dark:border-slate-900 pt-10 px-6">
-          <div className="max-w-2xl mx-auto space-y-4">
-            <p className="text-slate-400 dark:text-slate-500 text-sm font-medium tracking-widest uppercase">
-              Ingeniería de Software e Implementación
-            </p>
-            <h3 className="text-xl font-bold bg-gradient-to-r from-blue-600 to-indigo-500 bg-clip-text text-transparent">
-              Jhonathan Anota
-            </h3>
-            <div className="flex justify-center gap-6 text-slate-400">
-              <span className="text-xs">React 19</span>
-              <span className="text-xs">•</span>
-              <span className="text-xs">Vite</span>
-              <span className="text-xs">•</span>
-              <span className="text-xs">Tailwind CSS</span>
+        {/* Footer Profesional con Estilo */}
+        <footer className="relative mt-20 border-t border-slate-200 dark:border-slate-800">
+          {/* Fondo con degradado sutil */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-50/50 dark:to-blue-900/10 pointer-events-none" />
+          
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+              
+              {/* Lado Izquierdo: Branding */}
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
+                  <div className="p-2 bg-blue-600 rounded-lg shadow-lg shadow-blue-500/30">
+                    <Terminal size={20} className="text-white" />
+                  </div>
+                  <span className="text-xl font-black tracking-tighter bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    JAB Engineer
+                  </span>
+                </div>
+                <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
+                  Ingeniería de Software e Implementación
+                </p>
+              </div>
+
+              {/* Lado Derecho: Créditos y Stack */}
+              <div className="flex flex-col items-center md:items-end gap-3">
+                <div className="flex gap-4">
+                  <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-widest border border-slate-200 dark:border-slate-700">
+                    React 19
+                  </span>
+                  <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-widest border border-slate-200 dark:border-slate-700">
+                    Tailwind CSS
+                  </span>
+                  <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-widest border border-slate-200 dark:border-slate-700">
+                    Vite
+                  </span>
+                </div>
+                
+                <p className="text-slate-400 dark:text-slate-500 text-xs">
+                  © {new Date().getFullYear()} • <span className="text-blue-500 font-semibold">Jhonathan Anota</span> • Todos los derechos reservados
+                </p>
+              </div>
             </div>
-            <p className="text-xs text-slate-400/60 pt-4">
-              © {new Date().getFullYear()} | JAB Engineer | Todos los derechos reservados
-            </p>
           </div>
         </footer>
       </div>
