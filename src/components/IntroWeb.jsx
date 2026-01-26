@@ -13,7 +13,7 @@ function IntroWeb() {
             <div className="space-y-4 text-lg leading-relaxed text-slate-700 dark:text-slate-300">
                 <p>
                     La web fue concebida para facilitar la colaboración entre científicos y académicos, 
-                    permitiéndoles compartir información de manera eficiente. En 1989, <strong>Tim Berners-Lee</strong> 
+                    permitiéndoles compartir información de manera eficiente. En 1989,<strong>Tim Berners-Lee</strong>, 
                     desarrolló el concepto de la web mientras trabajaba en el <strong>CERN</strong>, reconociendo la necesidad 
                     de un sistema que enlazara documentos de investigación (Berners-Lee & Fischetti, 2000).
                 </p>

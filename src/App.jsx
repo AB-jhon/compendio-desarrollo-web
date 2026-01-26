@@ -61,7 +61,8 @@ function App() {
         <nav className="sticky top-0 z-50 bg-white/70 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200 dark:border-slate-800 p-2 shadow-sm">
           <div className="max-w-7xl mx-auto flex justify-center items-center gap-2 overflow-x-auto no-scrollbar py-2">
             {[
-              { to: "/IntroWeb", icon: <BookOpen size={18} />, label: "Inicio" },
+              { to: "/", icon: <BookOpen size={18} />, label: "Inicio" }, 
+              { to: "/IntroWeb", icon: <BookOpen size={18} />, label: "Introducción" },
               { to: "/Programacion", icon: <Code size={18} />, label: "Código" },
               { to: "/Dinamica", icon: <Sparkles size={18} />, label: "JS" },
               { to: "/Animaciones", icon: <Layout size={18} />, label: "Diseño" },
@@ -95,7 +96,7 @@ function App() {
         </nav>
 
         {/* Contenedor de Contenido Principal */}
-        <main className="container mx-auto p-6 md:p-12 max-w-6xl">
+        <main className="container mx-auto px-4 md:px-6 max-w-6xl mt-12 mb-20">
           <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-[2.5rem] shadow-2xl shadow-blue-500/5 p-8 md:p-14 transition-all duration-500 min-h-[60vh]">
             <Routes>
               <Route path="/IntroWeb" element={<IntroWeb />} />
@@ -123,43 +124,41 @@ function App() {
           </div>
         </main>
 
-        {/* Footer Profesional con Estilo */}
-        <footer className="relative mt-20 border-t border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm">
-          {/* Fondo con degradado sutil - Más visible en modo claro */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-100/40 dark:to-blue-900/20 pointer-events-none" />
+        {/* Footer Profesional Estilo Header */}
+        <footer className="bg-gradient-to-r from-blue-600 to-indigo-700 dark:from-blue-900 dark:to-slate-900 text-white p-12 shadow-2xl text-center relative overflow-hidden">
+          {/* Capa de brillo sutil para imitar el efecto del header */}
+          <div className="relative z-10" />
           
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
             <div className="flex flex-col md:flex-row justify-between items-center gap-8">
               
               {/* Lado Izquierdo: Branding */}
               <div className="text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-2 mb-2">
-                  <div className="p-2 bg-blue-600 rounded-lg shadow-lg shadow-blue-500/30">
-                    <Terminal size={20} className="text-white" />
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-2">
+                  <div className="p-2 bg-blue-500/20 border border-blue-500/50 rounded-lg shadow-lg">
+                    <Terminal size={20} className="text-blue-400" />
                   </div>
-                  {/* Añadimos text-blue-700 como base para que se vea en modo claro */}
-                  <span className="text-xl font-black tracking-tighter bg-gradient-to-r from-blue-700 to-indigo-700 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
+                  <span className="text-xl font-black tracking-tighter text-white">
                     JAB Engineer
                   </span>
                 </div>
-                <p className="text-slate-600 dark:text-slate-400 text-sm font-semibold">
+                <p className="text-slate-400 text-sm font-medium">
                   Ingeniería de Software e Implementación
                 </p>
               </div>
 
               {/* Lado Derecho: Créditos y Stack */}
-              <div className="flex flex-col items-center md:items-end gap-3">
-                <div className="flex gap-4">
-                  {/* Badges con bordes más definidos */}
+              <div className="flex flex-col items-center md:items-end gap-4">
+                <div className="flex gap-3">
                   {['React 19', 'Tailwind CSS', 'Vite'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full text-[10px] font-bold text-blue-600 dark:text-slate-400 uppercase tracking-widest border border-blue-200 dark:border-slate-700 shadow-sm">
+                    <span key={tech} className="px-3 py-1 bg-slate-800/50 border border-slate-700 rounded-full text-[10px] font-bold text-blue-300 uppercase tracking-widest">
                       {tech}
                     </span>
                   ))}
                 </div>
                 
-                <p className="text-slate-500 dark:text-slate-500 text-xs font-medium">
-                  © {new Date().getFullYear()} • <span className="text-blue-600 dark:text-blue-400 font-bold underline underline-offset-4 decoration-blue-500/30">Jhonathan Anota</span>
+                <p className="text-slate-500 text-xs">
+                  © {new Date().getFullYear()} • <span className="text-blue-400 font-bold">Jhonathan Anota</span> • Todos los derechos reservados
                 </p>
               </div>
             </div>
