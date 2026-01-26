@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { Sun, Moon, BookOpen, Code, Database, Layout, Sparkles, Terminal, ChevronRight, briefcase, ClipboardList } from 'lucide-react';
+import { Sun, Moon, BookOpen, Code, Database, Layout, Sparkles, Terminal, ChevronRight, Briefcase, ClipboardList } from 'lucide-react';
 import './index.css';
 
 // Importación de componentes
