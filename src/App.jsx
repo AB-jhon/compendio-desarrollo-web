@@ -124,9 +124,9 @@ function App() {
         </main>
 
         {/* Footer Profesional con Estilo */}
-        <footer className="relative mt-20 border-t border-slate-200 dark:border-slate-800">
-          {/* Fondo con degradado sutil */}
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-50/50 dark:to-blue-900/10 pointer-events-none" />
+        <footer className="relative mt-20 border-t border-slate-200 dark:border-slate-800 bg-slate-100/50 dark:bg-slate-900/50 backdrop-blur-sm">
+          {/* Fondo con degradado sutil - Más visible en modo claro */}
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-blue-100/40 dark:to-blue-900/20 pointer-events-none" />
           
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-12">
             <div className="flex flex-col md:flex-row justify-between items-center gap-8">
@@ -137,11 +137,12 @@ function App() {
                   <div className="p-2 bg-blue-600 rounded-lg shadow-lg shadow-blue-500/30">
                     <Terminal size={20} className="text-white" />
                   </div>
-                  <span className="text-xl font-black tracking-tighter bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                  {/* Añadimos text-blue-700 como base para que se vea en modo claro */}
+                  <span className="text-xl font-black tracking-tighter bg-gradient-to-r from-blue-700 to-indigo-700 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">
                     JAB Engineer
                   </span>
                 </div>
-                <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">
+                <p className="text-slate-600 dark:text-slate-400 text-sm font-semibold">
                   Ingeniería de Software e Implementación
                 </p>
               </div>
@@ -149,19 +150,16 @@ function App() {
               {/* Lado Derecho: Créditos y Stack */}
               <div className="flex flex-col items-center md:items-end gap-3">
                 <div className="flex gap-4">
-                  <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-widest border border-slate-200 dark:border-slate-700">
-                    React 19
-                  </span>
-                  <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-widest border border-slate-200 dark:border-slate-700">
-                    Tailwind CSS
-                  </span>
-                  <span className="px-3 py-1 bg-slate-100 dark:bg-slate-800 rounded-full text-[10px] font-bold text-slate-500 uppercase tracking-widest border border-slate-200 dark:border-slate-700">
-                    Vite
-                  </span>
+                  {/* Badges con bordes más definidos */}
+                  {['React 19', 'Tailwind CSS', 'Vite'].map((tech) => (
+                    <span key={tech} className="px-3 py-1 bg-white dark:bg-slate-800 rounded-full text-[10px] font-bold text-blue-600 dark:text-slate-400 uppercase tracking-widest border border-blue-200 dark:border-slate-700 shadow-sm">
+                      {tech}
+                    </span>
+                  ))}
                 </div>
                 
-                <p className="text-slate-400 dark:text-slate-500 text-xs">
-                  © {new Date().getFullYear()} • <span className="text-blue-500 font-semibold">Jhonathan Anota</span> • Todos los derechos reservados
+                <p className="text-slate-500 dark:text-slate-500 text-xs font-medium">
+                  © {new Date().getFullYear()} • <span className="text-blue-600 dark:text-blue-400 font-bold underline underline-offset-4 decoration-blue-500/30">Jhonathan Anota</span>
                 </p>
               </div>
             </div>
