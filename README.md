@@ -33,4 +33,8 @@ Si quieres ejecutar este proyecto localmente:
    git clone [https://github.com/AB-jhon/compendio-desarrollo-web.git](https://github.com/AB-jhon/compendio-desarrollo-web.git)
 
 
-   👤 Autor: Jhonathan Anota - Ingeniero de Software e Implementación
+   
+
+---
+
+👤 Autor: Jhonathan Anota - Ingeniero de Software e Implementación
