@@ -4,7 +4,7 @@
 
 @theme {
   --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  /* Añadimos colores personalizados si lo deseas */
+  /* colores personalizados */
   --color-brand-blue: #3b82f6;
 }
 
