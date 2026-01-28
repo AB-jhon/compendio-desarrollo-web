@@ -69,7 +69,7 @@ function Animaciones() {
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                     {[
-                        { label: 'Historia del GIF', url: 'https://en.wikipedia.org/wiki/Graphics_Interchange_Format' },
+                        { label: 'Historia del GIF', url: 'https://www.adobe.com/es/creativecloud/file-types/image/raster/gif-file.html' },
                         { label: 'Legado de Flash', url: 'https://www.adobe.com/products/flash.html' },
                         { label: 'Guía CSS Animations', url: 'https://www.w3.org/TR/css3-animations/' },
                         { label: 'GreenSock (GSAP)', url: 'https://greensock.com/gsap/' },
