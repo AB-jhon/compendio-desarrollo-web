@@ -64,13 +64,13 @@ function Proyectos() {
                         <ClipboardList className="text-purple-500" /> Planificación y Alcance
                     </h3>
                     <div className="p-5 bg-white dark:bg-slate-800 rounded-2xl border-l-4 border-l-purple-500 shadow-sm">
-                        <p className="text-sm">Identificación de requisitos de un producto mínimo viable (MVP). Por ejemplo, en un E-commerce: Carrito, Catálogo y Pasarela de Pagos.</p>
+                        <p className="text-sm">Producto mínimo viable (MVP). Por ejemplo, en un E-commerce: Carrito, Catálogo y Pasarela de Pagos.</p>
                     </div>
                 </div>
 
                 <div className="space-y-4">
                     <h3 className="flex items-center gap-2 text-xl font-bold text-slate-800 dark:text-white">
-                        <TrendingUp className="text-orange-500" /> Monitoreo KPIs (metricas)
+                        <TrendingUp className="text-orange-500" /> Monitoreo KPIs (métricas)
                     </h3>
                     <div className="p-5 bg-white dark:bg-slate-800 rounded-2xl border-l-4 border-l-orange-500 shadow-sm">
                         <ul className="text-sm space-y-1">
