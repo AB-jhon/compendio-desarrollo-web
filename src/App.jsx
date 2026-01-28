@@ -68,7 +68,7 @@ function App() {
               { to: "/Animaciones", icon: <Layout size={18} />, label: "Diseño" },
               { to: "/Interfaz", icon: <Database size={18} />, label: "UI/UX" },
               { to: "/BasesDatos", icon: <Database size={18} />, label: "Datos" },
-              { to: "/Proyectos", icon: <ClipboardList size={18} />, label: "Gestión" },
+              { to: "/Proyectos", icon: <ClipboardList size={18} />, label: "Proyectos" },
             ].map((link) => (
               <Link 
                 key={link.to}
