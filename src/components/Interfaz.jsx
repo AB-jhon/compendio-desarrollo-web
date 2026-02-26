@@ -55,7 +55,7 @@ function Interfaz() {
             </div>
 
             {/* Sección de Avances con diseño de "Lista de Características" */}
-            <div className="bg-blue-50/50 dark:bg-blue-900/10 p-8 rounded-3xl border border-blue-100 dark:border-blue-900/30">
+            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800"/*"bg-blue-50/50 dark:bg-blue-900/10 p-8 rounded-3xl border border-blue-100 dark:border-blue-900/30"*/>
                 <h3 className="text-xl font-semibold mb-8 text-center text-blue-800 dark:text-blue-300">Pilares de la Tecnología Moderna</h3>
                 <div className="space-y-6">
                     <div className="flex gap-4 items-start">
