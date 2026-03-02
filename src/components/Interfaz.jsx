@@ -1,7 +1,14 @@
-import React from 'react';
-import { Layout, Share2, MessageSquare, ShoppingCart, Layers, Zap, Smartphone, ExternalLink } from 'lucide-react';
+import React, { useState } from 'react';
+import { Layout, Share2, MessageSquare, ShoppingCart, Layers, Zap, Smartphone, ExternalLink, ShieldCheck, History } from 'lucide-react';
 
 function Interfaz() {
+    // Estado para el Laboratorio de Validación (Sección 2.3 del resumen)
+    const [form, setForm] = useState({ nombre: '', email: '' });
+
+    // Lógica de validación dinámica
+    const nombreValido = form.nombre.length >= 3;
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email);
+
     return (
         <section id="interfaz" className="animate-fade-in space-y-10">
             {/* Título Principal */}
@@ -10,9 +17,57 @@ function Interfaz() {
                     Diseño de Interfaz Dinámica
                 </h2>
                 <p className="text-lg leading-relaxed text-slate-700 dark:text-slate-300">
-                    Es la disciplina de crear entornos digitales que no solo son bellos, sino que <strong>reaccionan</strong>. Una interfaz dinámica se adapta al usuario, a los datos y al dispositivo en tiempo real.
+                    Sistemas digitales que ajustan su contenido y comportamiento en respuesta al contexto del usuario y patrones de interacción.
                 </p>
             </header>
+
+            {/* LABORATORIO: VALIDACIÓN DINÁMICA (Patrones de Diseño Interactivo) */}
+            <div className="bg-slate-50 dark:bg-slate-900/50 p-6 rounded-3xl border-2 border-dashed border-blue-200 dark:border-slate-800">
+                <div className="flex items-center gap-2 mb-6">
+                    <ShieldCheck className="text-blue-500" size={24} />
+                    <h3 className="text-xl font-semibold text-slate-800 dark:text-slate-200">Laboratorio: Validación en Tiempo Real</h3>
+                </div>
+                
+                <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 italic">
+                    "Al utilizar el evento input, el sistema proporciona feedback inmediato, reduciendo la fricción cognitiva".
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Campo Nombre */}
+                    <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Nombre (Min. 3 caracteres)</label>
+                        <input 
+                            type="text"
+                            placeholder="Tu nombre..."
+                            className={`w-full p-3 rounded-xl border-2 transition-all outline-none bg-white dark:bg-slate-800 text-slate-900 dark:text-white ${
+                                form.nombre === '' ? 'border-slate-200 dark:border-slate-700' : 
+                                nombreValido ? 'border-green-500 shadow-[0_0_10px_rgba(34,197,94,0.2)]' : 'border-red-500'
+                            }`}
+                            onChange={(e) => setForm({...form, nombre: e.target.value})}
+                        />
+                        <span className={`text-[10px] font-bold ${nombreValido ? 'text-green-500' : 'text-red-400'}`}>
+                            {form.nombre === '' ? 'Esperando entrada...' : nombreValido ? '✓ NOMBRE VÁLIDO' : '✗ DEMASIADO CORTO'}
+                        </span>
+                    </div>
+
+                    {/* Campo Email */}
+                    <div className="space-y-2">
+                        <label className="text-xs font-bold uppercase tracking-wider text-slate-500">Email Institucional</label>
+                        <input 
+                            type="email"
+                            placeholder="usuario@dominio.com"
+                            className={`w-full p-3 rounded-xl border-2 transition-all outline-none bg-white dark:bg-slate-800 text-slate-900 dark:text-white ${
+                                form.email === '' ? 'border-slate-200 dark:border-slate-700' : 
+                                emailValido ? 'border-blue-500 shadow-[0_0_10px_rgba(59,130,246,0.2)]' : 'border-red-500'
+                            }`}
+                            onChange={(e) => setForm({...form, email: e.target.value})}
+                        />
+                        <span className={`text-[10px] font-bold ${emailValido ? 'text-blue-500' : 'text-red-400'}`}>
+                            {form.email === '' ? 'Requerido para el registro' : emailValido ? '✓ FORMATO CORRECTO' : '✗ EMAIL INVÁLIDO'}
+                        </span>
+                    </div>
+                </div>
+            </div>
 
             {/* Grid de Aplicaciones Reales */}
             <div>
@@ -20,82 +75,48 @@ function Interfaz() {
                     <Layout className="text-blue-500" size={24} /> Casos de Uso en el Mundo Real
                 </h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {/* Tarjeta Redes Sociales */}
-                    <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:scale-[1.02] transition-transform">
                         <Share2 className="text-blue-400 mb-4" size={32} />
-                        {/* AGREGADO: text-slate-900 dark:text-white */}
                         <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Redes Sociales</h4>
                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Actualización de feeds y notificaciones instantáneas sin recargar. 
-                            <span className="block mt-2 text-xs italic opacity-70">(McCarthy, 2020)</span>
+                            Actualización de feeds y notificaciones instantáneas mediante WebSockets.
                         </p>
                     </div>
 
-                    {/* Tarjeta Mensajería */}
-                    <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:scale-[1.02] transition-transform">
                         <MessageSquare className="text-green-500 mb-4" size={32} />
-                        {/* AGREGADO: text-slate-900 dark:text-white */}
                         <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">Mensajería</h4>
                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                             Comunicación bidireccional inmediata y estados de "escribiendo..." en tiempo real.
                         </p>
                     </div>
 
-                    {/* Tarjeta E-commerce */}
-                    <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition-shadow">
+                    <div className="bg-white dark:bg-slate-800 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:scale-[1.02] transition-transform">
                         <ShoppingCart className="text-orange-500 mb-4" size={32} />
-                        {/* AGREGADO: text-slate-900 dark:text-white */}
                         <h4 className="font-bold text-lg mb-2 text-slate-900 dark:text-white">E-commerce</h4>
                         <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-                            Recomendaciones personalizadas y carritos que se actualizan al instante.
-                            <span className="block mt-2 text-xs italic opacity-70">(Smith & Johnson, 2019)</span>
+                            Lazy loading para catálogos extensos y carritos dinámicos.
                         </p>
                     </div>
                 </div>
             </div>
 
-            {/* Sección de Avances con diseño de "Lista de Características" */}
-            <div className="bg-white dark:bg-slate-900 p-8 rounded-3xl border border-slate-200 dark:border-slate-800"/*"bg-blue-50/50 dark:bg-blue-900/10 p-8 rounded-3xl border border-blue-100 dark:border-blue-900/30"*/>
-                <h3 className="text-xl font-semibold mb-8 text-center text-blue-800 dark:text-blue-300">Pilares de la Tecnología Moderna</h3>
-                <div className="space-y-6">
-                    <div className="flex gap-4 items-start">
-                        <div className="bg-blue-500 p-2 rounded-lg text-white"><Layers size={20} /></div>
-                        <div>
-                            <h4 className="font-bold">Frameworks de Componentes</h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">React, Angular y Vue.js para crear piezas reutilizables. <cite className="text-xs opacity-60">(Lee, 2020)</cite></p>
-                        </div>
-                    </div>
-                    <div className="flex gap-4 items-start">
-                        <div className="bg-yellow-500 p-2 rounded-lg text-white"><Zap size={20} /></div>
-                        <div>
-                            <h4 className="font-bold">Comunicación Instantánea</h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">WebSockets para intercambio de datos sin latencia. <cite className="text-xs opacity-60">(Miller, 2021)</cite></p>
-                        </div>
-                    </div>
-                    <div className="flex gap-4 items-start">
-                        <div className="bg-purple-500 p-2 rounded-lg text-white"><Smartphone size={20} /></div>
-                        <div>
-                            <h4 className="font-bold">Diseño Responsivo Adaptable</h4>
-                            <p className="text-sm text-slate-600 dark:text-slate-400">Flexbox y CSS Grid para una experiencia perfecta en móviles. <cite className="text-xs opacity-60">(Garcia, 2021)</cite></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Referencias en formato de lista técnica */}
-            <footer className="pt-8">
-                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Bibliografía Técnica</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
+            {/* Bibliografía Técnica Actualizada */}
+            <footer className="pt-8 bg-slate-50 dark:bg-slate-900/30 p-6 rounded-2xl border border-slate-200 dark:border-slate-800">
+                <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-6 flex items-center gap-2">
+                    <History size={16}/> Fuentes Académicas Consultadas (2024-2026)
+                </h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
-                        { aut: 'Brown, J.', tit: 'Real-time Data and Analytics Interfaces', url: 'https://www.techpress.com' },
-                        { aut: 'Garcia, M.', tit: 'Responsive Web Design and Accessibility', url: 'https://www.webtechpub.com' },
-                        { aut: 'Lee, R.', tit: 'Modern UI Frameworks', url: 'https://www.uxdesignjournal.com' },
-                        { aut: 'McCarthy, S.', tit: 'Dynamic Interfaces in Social Media', url: 'https://www.userexperiencestudies.com' }
+                        { aut: 'Nielsen Norman Group', tit: 'Usability Principles for Interactive Systems (2024)', url: 'https://www.nngroup.com' },
+                        { aut: 'Google', tit: 'Material Design 3: Interactive Patterns (2023)', url: 'https://m3.material.io' },
+                        { aut: 'WebAIM', tit: 'Accessibility in Dynamic Content (2025)', url: 'https://webaim.org' },
+                        { aut: 'MDN Web Docs', tit: 'Client-side Validation Standards (2026)', url: 'https://developer.mozilla.org' }
                     ].map((ref, i) => (
                         <a key={i} href={ref.url} target="_blank" rel="noopener noreferrer" 
-                           className="group flex items-center justify-between text-xs p-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded transition-colors">
-                            <span className="text-slate-600 dark:text-slate-400"><strong>{ref.aut}</strong> - {ref.tit}</span>
-                            <ExternalLink size={12} className="opacity-0 group-hover:opacity-100 text-blue-500" />
+                           className="group flex items-center justify-between text-xs p-3 bg-white dark:bg-slate-800 rounded-xl border border-slate-100 dark:border-slate-700 hover:border-blue-500 transition-all">
+                            <span className="text-slate-700 dark:text-slate-300 font-medium"><strong>{ref.aut}</strong> - {ref.tit}</span>
+                            <ExternalLink size={14} className="text-blue-500 opacity-50 group-hover:opacity-100" />
                         </a>
                     ))}
                 </div>

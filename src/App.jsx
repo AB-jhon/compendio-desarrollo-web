@@ -111,11 +111,11 @@ function App() {
                   <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-full">
                     <Terminal size={60} className="text-blue-600 animate-pulse" />
                   </div>
-                  <h2 className="text-4xl font-bold text-slate-800 dark:text-white">Bienvenido al Compendio</h2>
-                  <p className="max-w-md text-slate-500 dark:text-slate-400 text-lg">
-                    Explora las secciones superiores para sumergirte en el ecosistema del desarrollo web moderno.
-                  </p>
-                  <Link to="/IntroWeb" className="mt-4 flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition-all hover:shadow-lg hover:shadow-blue-500/30">
+                  <h2 className="text-4xl font-bold text-slate-800 dark:text-white">Bienvenido al Compendio Interactivo de Desarrollo Web</h2>
+                  <p className="max-w-2xl mx-auto text-center text-slate-500 dark:text-slate-400 text-lg leading-relaxed">
+                    Este espacio integra la investigación teórica de la Especialidad en Diseño Web con la implementación práctica en arquitecturas modernas de React. Explore cada sección para visualizar la evolución desde los fundamentos hasta la gestión estratégica de proyectos.
+                    </p>
+                  <Link to="/IntroWeb" className="mt-8 mx-auto w-fit flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105 hover:shadow-lg hover:shadow-blue-500/30">
                     Comenzar Recorrido <ChevronRight size={20} />
                   </Link>
                 </div>
@@ -139,7 +139,7 @@ function App() {
                     <Terminal size={20} className="text-blue-400" />
                   </div>
                   <span className="text-xl font-black tracking-tighter text-white">
-                    Jhonathan Anota
+                    Jhonathan Anota Badillo
                   </span>
                 </div>
                 <p className="text-slate-400 text-sm font-medium">
@@ -148,18 +148,27 @@ function App() {
               </div>
 
               {/* Lado Derecho: Créditos y Stack */}
+              {/* Lado Derecho: Créditos Académicos */}
               <div className="flex flex-col items-center md:items-end gap-4">
                 <div className="flex gap-3">
-                  {['React 19', 'Tailwind CSS', 'Vite'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-slate-800/50 border border-slate-700 rounded-full text-[10px] font-bold text-blue-300 uppercase tracking-widest">
-                      {tech}
-                    </span>
-                  ))}
+                  {/* Badges Institucionales y de Calidad */}
+                  <span className="px-3 py-1 bg-blue-500/10 border border-blue-500/30 rounded-full text-[10px] font-bold text-blue-200 uppercase tracking-widest">
+                    CUSA Especialidad
+                  </span>
+                  <span className="px-3 py-1 bg-slate-800/50 border border-slate-700 rounded-full text-[10px] font-bold text-blue-300 uppercase tracking-widest">
+                    DGESU Compliant
+                  </span>
                 </div>
-                
-                <p className="text-slate-500 text-xs">
-                  © {new Date().getFullYear()} • <span className="text-blue-400 font-bold">JAB Engineer</span> • Todos los derechos reservados
-                </p>
+
+                <div className="text-center md:text-right">
+                  <p className="text-slate-400 text-[11px] leading-relaxed">
+                    Proyecto de Titulación: Especialidad en Diseño Web<br/>
+                    <span className="text-slate-500 text-[10px]">Periodo Académico: 2016 - 2019 • Entrega: 2026</span>
+                  </p>
+                  <p className="text-slate-500 text-xs mt-2">
+                    © {new Date().getFullYear()} • <span className="text-blue-400 font-bold">JAB Engineer</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

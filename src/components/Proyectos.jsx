@@ -108,18 +108,42 @@ function Proyectos() {
                 </h4>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     {[
-                        { aut: "Beck et al. (2001)", tit: "Manifesto for Agile Software Development", cat: "Agile Alliance" },
-                        { aut: "PMI (2017)", tit: "PMBOK Guide 6th Edition", cat: "Project Management" },
-                        { aut: "Chacon & Straub (2014)", tit: "Pro Git", cat: "Version Control" },
-                        { aut: "DeMarco & Lister (2003)", tit: "Peopleware", cat: "Team Productivity" }
+                        { 
+                            aut: "Beck et al. (2001)", 
+                            tit: "Manifesto for Agile Software Development", 
+                            cat: "Agile Alliance",
+                            url: "https://agilemanifesto.org/" 
+                        },
+                        { 
+                            aut: "PMI (2017)", 
+                            tit: "PMBOK Guide 6th Edition", 
+                            cat: "Project Management",
+                            url: "https://www.pmi.org/pmbok-guide-standards" 
+                        },
+                        { 
+                            aut: "Chacon & Straub (2014)", 
+                            tit: "Pro Git", 
+                            cat: "Version Control",
+                            url: "https://git-scm.com/book/en/v2" 
+                        },
                     ].map((ref, i) => (
-                        <div key={i} className="p-4 bg-slate-50 dark:bg-slate-900/30 rounded-xl border border-slate-100 dark:border-slate-800 flex justify-between items-center group transition-all hover:border-blue-300">
+                        <a 
+                            key={i} 
+                            href={ref.url} 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="p-4 bg-slate-50 dark:bg-slate-900/30 rounded-xl border border-slate-100 dark:border-slate-800 flex justify-between items-center group transition-all hover:border-blue-500 hover:shadow-md cursor-pointer"
+                        >
                             <div className="text-xs">
-                                <span className="font-bold block text-slate-800 dark:text-slate-200">{ref.tit}</span>
-                                <span className="text-slate-500">{ref.aut} — {ref.cat}</span>
+                                <span className="font-bold block text-slate-800 dark:text-slate-200 group-hover:text-blue-500 transition-colors">
+                                    {ref.tit}
+                                </span>
+                                <span className="text-slate-500">
+                                    {ref.aut} — {ref.cat}
+                                </span>
                             </div>
-                            <ExternalLink size={14} className="text-slate-300 group-hover:text-blue-500" />
-                        </div>
+                            <ExternalLink size={14} className="text-slate-300 group-hover:text-blue-500 transition-colors" />
+                        </a>
                     ))}
                 </div>
             </footer>

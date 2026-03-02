@@ -47,14 +47,12 @@ function IntroWeb() {
                 </h3>
                 <ul className="space-y-3">
                     <li className="pl-4 border-l-2 border-slate-300 dark:border-slate-600 text-sm text-slate-600 dark:text-slate-400 italic">
-                        Berners-Lee, T., & Fischetti, M. (2000). 
-                        <span className="text-slate-800 dark:text-slate-200 not-italic font-medium"> Tejiendo la Web: El diseño original y el destino final de la World Wide Web.</span> 
-                        Harper.
+                        Berners-Lee, Tim (2000). 
+                        <span className="text-slate-800 dark:text-slate-200 not-italic font-medium"> Tejiendo la Red: El inventor del World Wide Web nos descubre su origen.</span>
                     </li>
                     <li className="pl-4 border-l-2 border-slate-300 dark:border-slate-600 text-sm text-slate-600 dark:text-slate-400 italic">
-                        Berners-Lee, T. (1999). 
-                        <span className="text-slate-800 dark:text-slate-200 not-italic font-medium"> Weaving the Web.</span> 
-                        HarperSanFrancisco.
+                        Colaboradores de MDN (2026).
+                        <span className="text-slate-800 dark:text-slate-200 not-italic font-medium"> TCP/IP y protocolos.</span> 
                     </li>
                 </ul>
             </div>
