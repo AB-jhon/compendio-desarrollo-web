@@ -36,5 +36,8 @@ Este repositorio constituye la evidencia técnica y práctica del aprendizaje ad
 ---
 
 👤 Autor: Jhonathan Anota Badillo
-🌐 Demo en vivo: compendio-desarrollo-web.vercel.app
 
+## 🚀 Despliegue
+[![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://compendio-desarrollo-web.vercel.app)
+
+> **Nota:** Haz clic en el botón de arriba para abrir la aplicación en vivo.
