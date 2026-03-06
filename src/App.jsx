@@ -163,7 +163,7 @@ function App() {
                 <div className="text-center md:text-right">
                   <p className="text-slate-400 text-[11px] leading-relaxed">
                     Proyecto de Titulación: Especialidad en Diseño Web<br/>
-                    <span className="text-slate-500 text-[10px]">Periodo Académico: 2016 - 2019 • Entrega: 2026</span>
+                    <span className="text-slate-500 text-[10px]">Periodo Académico: 2017 - 2018 • Entrega: 2026</span>
                   </p>
                   <p className="text-slate-500 text-xs mt-2">
                     © {new Date().getFullYear()} • <span className="text-blue-400 font-bold">JAB Engineer</span>
