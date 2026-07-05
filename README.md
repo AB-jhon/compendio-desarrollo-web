@@ -2,7 +2,7 @@
 
 > **Proyecto de Titulación: Especialidad en Diseño Web**
 > **Institución:** Centro Universitario San Ángel (CUSA)
-> **Periodo Académico:** 2016 - 2019 (Entrega 2026)
+> **Periodo Académico:** 2017 - 2018 (Entrega 2026)
 > **Autor:** Jhonathan Anota Badillo
 
 Este repositorio constituye la evidencia técnica y práctica del aprendizaje adquirido durante la especialidad. Cada módulo del código ha sido diseñado para validar los fundamentos teóricos y metodológicos descritos en el compendio escrito, integrando estándares modernos (2024-2026).
